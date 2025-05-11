@@ -1,9 +1,9 @@
-# Ex.07 Restaurant Website
-# Date: 01.05.2025
+# Ex.07: Restaurant Website
+# Date:08.05.2025
 # AIM:
 To develop a static Restaurant website to display the food items and services provided by them.
 
-# DESIGN STEPS:
+# STEPS:
 ## Step 1:
 Requirement collection.
 
@@ -26,664 +26,529 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 # PROGRAM:
-~~~
-home.html
+```
+<html>
+    <head>
+        <title>Sprinkle Restaurant</title>
+        <style>
+             body{
+            background-image: url(restaurant-background.jpg);
+            background-repeat: no-repeat;
+            background-size: 1550px 850px;
+        }    
+        #name h1{
+            color: #ff0800 ;
+            text-shadow: rgb(80, 11, 255);
+            position: absolute;
+            top: 40px;
+            left: 400px;
+            font-weight: 300px;
+            font-size: 50px;
+            letter-spacing: 20px;
+            font-family: cursive;
+        }
+        .navbar{
+                top: 150px;
+                position: absolute;
+                left: 0px;
+                width: 1550px;
+            }
+            .navbar ul {
+                text-decoration: none;
+                text-align: center;
+            }
+            .navbar li {   
+                display: inline-block;
+                text-decoration: none;
+                font-size: 50px;
+                height: 50px;
+                padding-top: 30px;
+            }
+            .navbar a {
+                text-decoration: none;
+                padding: 40px 100px;
+                color: rgb(255, 247, 0);
+            }
+            .navbar a:hover {
+                color: rgb(0, 0, 0);          
+              }
+        </style>
+    </head>
+    <body>
+        <div id="name">
+            <h1>Sprinkle Restaurant</h1>
+        </div>
+        <div class="navbar">
+            <ul type="none">
+                <li><a href="HOME.html" title="Home">Home</a></li>
+                <li><a href="MENU.html" title="Menu">Menu</a></li>
+                <li><a href="CHEFS.html" title="Chefs">Chefs</a></li>
+                <li><a href="Contact us.html"title="About us">About us</a></li>
+            </ul>
+    </body>
+</html>
+```
+# HOME.html
+```
+<html>
+    <head>
+        <title>Welcome to Sprinkle Restaurant</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Knewave&family=Oswald:wght@200..700&family=Pacifico&family=Princess+Sofia&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-image: url(nwe.avif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+                color: #000000;
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+                align-items: center; /* Centers vertically */
+                height: 100vh; /* Full viewport height */
+            }
+
+            /* Box moved to the center */
+            .container {
+                width: 35%;
+                height: auto;
+                padding: 20px;
+                background-color: rgba(193, 193, 193, 0.919); /* Light white background with slight transparency */
+                border-radius: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                text-align: center;
+            }
+
+            #header h1 {
+                font-size: 38px;
+                color: #333;
+                font-family: "Pacifico", cursive;
+                margin: 0;
+            }
+
+            #header h2 {
+                font-size: 40px;
+                color: #222;
+                font-family: "Princess Sofia", cursive;
+                margin-top: 10px;
+            }
+
+            #working-hours {
+                font-size: 28px;
+                font-family: "Arima", sans-serif;
+                color: #2C3E50;
+                margin: 20px 0 10px;
+            }
+
+            #timing {
+                font-size: 26px;
+                font-family: "Oswald", sans-serif;
+                color: #16A085;
+                margin-bottom: 15px;
+            }
+
+            #tagline {
+                font-size: 20px;
+                font-family: "Pacifico", cursive;
+                color: #7D3C98;
+                margin-top: 15px;
+            }
+
+            .divider {
+                width: 50%;
+                height: 3px;
+                background-color: #7F8C8D;
+                margin: 15px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="header">
+                <h1>Welcome To</h1>
+                <h2>Sprinkle Restaurant</h2>
+            </div>
+            <div class="divider"></div>
+            <div id="working-hours">
+                Delightful Dishes, Every Time!
+            </div>
+            <div id="timing">
+                Serving From: <br> <strong>7 AM to 11 PM</strong>
+            </div>
+            <div id="tagline">
+                "Where Taste Meets Perfection!"
+            </div>
+        </div>
+    </body>
+</html>
+
+```
+# MENU.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprinkle Restaurant Menu</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #eae7dc;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+        }
+        .menu-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .menu-header h1 {
+            font-size: 80px;
+            color: #d35400;
+        }
+        .menu-header p {
+            font-size: 32px;
+            color: #555;
+        }
+        .menu-section {
+            margin-bottom: 60px;
+        }
+        .menu-section h2 {
+            font-size: 48px;
+            border-bottom: 5px solid #d35400;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 2px solid #ccc;
+        }
+        .menu-item span {
+            font-size: 32px;
+        }
+        .menu-item .price {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .menu-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-header">
+        <h1>Sprinkle Restaurant</h1>
+        <p>Delightful Cuisine for Every Taste</p>
+    </div>
+
+    <div class="menu-section">
+        <h2>Appetizers</h2>
+        <div class="menu-item">
+            <span>Garlic Bread</span>
+            <span class="price">₹400</span>
+        </div>
+        <div class="menu-item">
+            <span>Bruschetta</span>
+            <span class="price">₹600</span>
+        </div>
+        <div class="menu-item">
+            <span>Caesar Salad</span>
+            <span class="price">₹650</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>Main Courses</h2>
+        <div class="menu-item">
+            <span>Grilled Salmon</span>
+            <span class="price">₹1450</span>
+        </div>
+        <div class="menu-item">
+            <span>Ribeye Steak</span>
+            <span class="price">₹2000</span>
+        </div>
+        <div class="menu-item">
+            <span>Vegetable Stir-fry</span>
+            <span class="price">₹1100</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>Fast Foods</h2>
+        <div class="menu-item">
+            <span>Burger</span>
+            <span class="price">₹250</span>
+        </div>
+        <div class="menu-item">
+            <span>Pizza (Medium)</span>
+            <span class="price">₹700</span>
+        </div>
+        <div class="menu-item">
+            <span>French Fries</span>
+            <span class="price">₹150</span>
+        </div>
+        <div class="menu-item">
+            <span>Hot Dog</span>
+            <span class="price">₹200</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>Junk Foods</h2>
+        <div class="menu-item">
+            <span>Nachos</span>
+            <span class="price">₹300</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Wings</span>
+            <span class="price">₹500</span>
+        </div>
+        <div class="menu-item">
+            <span>Onion Rings</span>
+            <span class="price">₹200</span>
+        </div>
+        <div class="menu-item">
+            <span>Mozzarella Sticks</span>
+            <span class="price">₹350</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>Desserts</h2>
+        <div class="menu-item">
+            <span>Cheesecake</span>
+            <span class="price">₹500</span>
+        </div>
+        <div class="menu-item">
+            <span>Chocolate Lava Cake</span>
+            <span class="price">₹600</span>
+        </div>
+        <div class="menu-item">
+            <span>Ice Cream Sundae</span>
+            <span class="price">₹400</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>Beverages</h2>
+        <div class="menu-item">
+            <span>Coffee</span>
+            <span class="price">₹225</span>
+        </div>
+        <div class="menu-item">
+            <span>Tea</span>
+            <span class="price">₹185</span>
+        </div>
+        <div class="menu-item">
+            <span>Fresh Juice</span>
+            <span class="price">₹300</span>
+        </div>
+    </div>
+
+    <div class="menu-images">
+        <img src="C:\PRIVATE\Web Application Development\61XhetEHp4L-removebg-preview.png" alt="Dish 1">
+        <img src="C:\PRIVATE\Web Application Development\cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zMF9hX2RyYXdpbmdfb2ZfYV9idXJnZXJfaW5fdGhlX3N0eWxlX29mX2JvbGRfb181NWI2OWI5ZC02YjQ2LTRkZDctYWFlMy0wMDkzOTUwODc5ZDdfMS5wbmc-removebg-pre.png" alt="Dish 2">
+        <img src="C:\PRIVATE\Web Application Development\images-removebg-preview.png" alt="Dish 3">
+        <img src="C:\PRIVATE\Web Application Development\pink-cake-with-strawberry-the-theme-of-food-and-dessert-isolated-object-transparent-background-ai-generated-free-png.jpg" alt="Dish 4">
+    </div>
+</body>
+</html>
+
+```
+# CHEFS.html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>restarent page</title>
-    <link rel="stylesheet" href="res.css">
-</head>
-<header>
-   <div class="name">
-     <li class="name1">🍔MR.</li> 
-    <li class="name2">Honey🍯</li><br>
-</div>
-</header>
+    <title>Chefs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&family=Lora:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            background-image: url('chef bg.jpg'); /* Your background image */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Sprinkle Restaurant Heading */
+        #restaurant-title {
+            text-align: center;
+            font-size: 60px; /* Larger font for restaurant name */
+            color: #2E8B57; /* Greenish color for restaurant */
+            font-family: 'Lora', serif;
+            margin-top: 60px; /* Increased space from top */
+            margin-bottom: 50px; /* Added space below for balance */
+        }
+
+        #chefs {
+            text-align: center;
+            font-size: 48px; /* Slightly smaller font size for section title */
+            color: brown;
+            margin-top: 40px; /* Increased space between restaurant title and chef heading */
+            font-family: "Lora", serif;
+        }
+
+        /* Grid Layout */
+        .chef-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 40px; /* Increased gap between items */
+            margin: 30px 50px; /* Adjusted margin */
+        }
+
+        .chef-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 30px; /* Increased padding */
+        }
+
+        .chef-container img {
+            width: 250px; /* Increased image width */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 30px; /* Increased margin between image and text */
+        }
+
+        .chef-details {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: left;
+        }
+
+        .chef-details h1 {
+            font-size: 30px; /* Increased font size for chef name */
+            margin: 8px 0; /* Adjusted margin */
+        }
+
+        .chef-details h2, .chef-details h3 {
+            font-size: 22px; /* Increased font size for passion and experience */
+            margin: 6px 0; /* Adjusted margin */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 16px; /* Slightly larger footer font */
+            color: #888;
+        }
+    </style>
+</head>
 <body>
-    <div class="menu">
-        <ul>
-            <li><a href="res.html">HOME</a></li>
-            <li><a href="menu.html">MENU</a></li>
-            <li><a href="admin.html">ADMINISTRATION</a></li>
-            <li><a href="contect.html">CONTACT US</a></li>
-        </ul> 
+    <!-- Restaurant Title -->
+    <div id="restaurant-title">
+        <h1>Sprinkle Restaurant</h1>
     </div>
-    <div class="food">
-        <center>
-         <table>
-            <tr>
-                <td><p>OUR RESTARENT IS UNIQUE</p><br><img src="cooking.jpeg"><br>our restarent is very spcial in burger.<br>we make burger in pure attapowder<br>we useing only contery chicken.<br>   <br>   <br> <br></td>
-                <td><center><p>FACILITIES</center><br></p><img src="restarent.jpeg"><br>we have luxery outlook.we<br> are NO.1 in india.we have<br> party hall also and we provide<br>inernational drinks and we gave<br>our own brand jigarthanda also<br>     <br>  <br></td>
-                <td><p>WORKING DAYS</p><br><img src="chef.jpeg"><center>our restarent working time</center><br>MONDAY TO SUNDAY<BR>10:00AM-11:00PM<BR>MONDAY IT'S OUR OFFER DAY<BR> <a href="menu.html">GO TO MENU AND PLASE ORDER</a> </td>
-            </tr>
-         </table>
-        </center>
+
+    <div id="chefs">
+        <h1>Our Administration and Chefs</h1>
     </div>
-    <div class="offer">
-      <center>
-        <table>
-            <tr>
-          <td>
-            <p class="title">OUR FRIDAY FRY CHICKEN OFFER IS GOING ON....</p><BR>
-                <P class="title1">YOU AER A FIRST COSTOMER GET YOUR FLAT 50% OFFER.we provide many offer like buy one get one offer in 🍔burgur and 🍕pizza.we contect some contest and we provide unlimited food for winers.if you order through our web site and get extra offers.</P>
-        </td>
-           </tr>
-        </table>
-    </center> 
+
+    <div class="chef-grid">
+        <!-- Chef 1 -->
+        <div class="chef-container" id="chef1">
+            <img src="chef 1.jpg" alt="Chef VJ">
+            <div class="chef-details">
+                <h1>Chef VJ</h1>
+                <h2>Passion: Head</h2>
+                <h3>Experience: 13 years</h3>
+            </div>
+        </div>
+
+        <!-- Chef 2 -->
+        <div class="chef-container" id="chef2">
+            <img src="chef 2.jpg" alt="Chef AK">
+            <div class="chef-details">
+                <h1>Chef AK</h1>
+                <h2>Passion: Executive Manager</h2>
+                <h3>Experience: 7 years</h3>
+            </div>
+        </div>
+
+        <!-- Chef 3 -->
+        <div class="chef-container" id="chef3">
+            <img src="chef 3.jpg" alt="Chef D">
+            <div class="chef-details">
+                <h1>Chef D</h1>
+                <h2>Passion: Saucier Chef</h2>
+                <h3>Experience: 8 years</h3>
+            </div>
+        </div>
+
+        <!-- Chef 4 -->
+        <div class="chef-container" id="chef4">
+            <img src="chef 4.jpg" alt="Chef MSD">
+            <div class="chef-details">
+                <h1>Chef MSD</h1>
+                <h2>Passion: Pastry Chef</h2>
+                <h3>Experience: 7 years</h3>
+            </div>
+        </div>
+
+        <!-- Chef 5 -->
+        <div class="chef-container" id="chef5">
+            <img src="chef 5.jpg" alt="Chef Chris">
+            <div class="chef-details">
+                <h1>Chef Chris</h1>
+                <h2>Passion: Pantry Chef</h2>
+                <h3>Experience: 4 years</h3>
+            </div>
+        </div>
+
+        <!-- Chef 6 -->
+        <div class="chef-container" id="chef6">
+            <img src="Chef6.jpg" alt="Chef Rash">
+            <div class="chef-details">
+                <h1>Chef Rash</h1>
+                <h2>Passion: Butcher Chef</h2>
+                <h3>Experience: 4 years</h3>
+            </div>
+        </div>
     </div>
+
     <footer>
-       <hr style="color: rgb(91, 38, 38);"> 
-       <center>
-      <p class="author">DISIGNED AND DEVLOPED BY </p><P class="name">CHANDRU.K</P>
-    </center>
+        <p>© 2024 All Rights Reserved.</p>
     </footer>
 </body>
 </html>
 
-home.css
-
-header{
-    ;
-}
-.name{
-    margin-top: 13px;
-    margin-left: 45%;
-}
-.name1{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 39px;
-    color: rgba(215, 49, 7, 0.803);
-    
-}
-.name2{
-    font-family: cursive;
-    font-size: 37px;
-    color: rgba(222, 215, 13, 0.97);
-    font-weight: bold;
-    
-}
-li{
-    float: left;
-    list-style: none;
-}
-
-ul li a{
-display: flex;
-padding-left: 50px;
-padding-right: 50px;
-color: aquamarine;
-}
-ul li a:hover{
-    color: aliceblue;
-    cursor: pointer;
-}
-body{
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-blend-mode: color-burn;
-}
-.menu{
-    margin-top: 60px;
-    margin-left: 330px;
-    border-width: 30px;
-    border-color: aquamarine;
-    background-color: rgb(84, 92, 92);
-    display: inline-flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: rgb(176, 129, 100);
-    border-radius:  25px;
-}
-.food{
-    margin-top: 90px;
-    padding: 14px;
-}
-td{
-padding: 20px;
-background-color: bisque;
-border-width: px;
-border-radius: 18px;
-white-space: 5px;
-}
-tr{
-    padding: 5px;
-}
-p{
-    font-weight: bolder;
-    align-items: center;
-}
-img{
-    align-items: center;
-}  
-.offer table tr{
-    width: 70%;
-}
-.offer td{
-    background-image: url(footer.jpeg);
-    width: 900px;
-    height: 150px;
-    align-items: center;
-    border-color: rgb(219, 8, 152);
-    border-width: 5px;
-    border-radius: 20px;
-    border-style: double;
-}
-.offer .title{
-    color: rgb(214, 210, 210);
-    font-size:xx-large ;
-    font-weight: bolder;
-    font-family: 'Times New Roman', Times, serif;
-    ;
-}
-.offer .title1{
-    color: aliceblue;
-    font-weight: bold;
-    font-size: larger;
-}
-footer .author{
-    color: rgb(245, 126, 7);
-    
-}
-footer .name{
-    font-weight: bold;
-    font-family: cursive;
-    margin-left: 50px;
-    font-size: larger;
-    color: rgb(220, 22, 68);
-}
-
-menu.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin page</title>
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body>
-    <center>
-        <h1>OUR  SPICHAL  MENU</h1>
-        <div class="menu">
-            <ul>
-                <li><a href="res.html">HOME</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="admin.html">ADMINISTRATION</a></li>
-                <li><a href="contect.html">CONTACT US</a></li>
-            </ul> 
-        </div>
-    <table>
-        <tr>
-            <td><img src="burger.jpeg">   <br><button href="#">order</button><br>chicken burker</td>
-            <td><img src="bireyani.jpeg"> <br><button href="#">order</button><br>tum biriyani</td>
-            <td><img src="dosa.jpeg">     <br><button href="#">order</button><br>onion dosa</td>
-            <td><img src="kfc.jpeg">      <br><button href="#">order</button><br> fryed chicken</td>
-        </tr>
-        <tr>
-            <td><img src="frys.jpeg">     <br><button href="#">order</button><br>finger chipes</td>
-            <td><img src="meal.jpeg">     <br><button href="#">order</button><br>kerala meal</td>
-            <td><img src="pastha.jpeg">   <br><button href="#">order</button><br>allo pastha</td>
-            <td><img src="thali.jpeg">    <br><button href="#">order</button><br>panjabi thali</td>
-        </tr>
-        <tr>
-            <td> <img src="parota.jpeg">  <br><button href="#">order</button><br>bun porotta</td>
-            <td><img src="idly.jpeg">     <br><button href="#">order</button><br>madurai idly</td>
-            <td> <img src="puri.jpeg">    <br><button href="#">order</button><br>andhra puri</td>
-            <td><img src="kulfi.jpeg">    <br><button href="#">order</button><br>badham kulfi</td>
-        </tr>
-    </table>
-    </center>
-</body>
-<footer>
-    <hr style="color: rgb(91, 38, 38);"> 
-    <center>
-   <p class="author">DISIGNED AND DEVLOPED BY </p><P class="name">CHANDRU.K</P>
- </center>
- </footer
-<style>
-    .body{
-        background-image:bgimage.jpeg ;
-    }
-</style>
-</html>
-
-menu.css
-
-*
-table{
-   align-content: center; 
-   margin-top: 140px;
-}
-body{
-    background-image:url(bgiamge2.jpg) ;
-    background-size: cover;
-    backdrop-filter: blur(6px),darken(30px);
-}
-h1{
-    word-spacing: 4px;
-    color: rgba(207, 20, 20, 0.855);}
-li{
-    float: left;
-    list-style: none;
-}
-
-ul li a{
-display: flex;
-padding-left: 50px;
-padding-right: 50px;
-color: aquamarine;
-}
-ul li a:hover{
-    color: aliceblue;
-    cursor: pointer;
-}
-.menu{
-    margin-top: 60px;
-    margin-left: 110px;
-    border-width: 30px;
-    border-color: aquamarine;
-    background-color: rgb(84, 92, 92);
-    display: inline-flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: rgb(176, 129, 100);
-    border-radius:  25px}
-
-td{
-    background-color: blanchedalmond;
-    padding: 9px;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-align: center;
-
-}
-button{
-    width: 60px;
-    height: 20px;
-    color: brown;
-
-}
-button :hover{
-    color: aquamarine;
-    cursor: pointer;
-}
-footer .author{
-    color: rgb(245, 126, 7);
-    
-}
-footer .name{
-    font-weight: bold;
-    font-family: cursive;
-    margin-left: 50px;
-    font-size: larger;
-    color: rgb(220, 22, 68);
-}
-
-admin.html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin page</title>
-    <link rel="stylesheet" href="admin.css">
-</head>
-<body>
-    <center>
-        <h1>OUR ADMINISRATOES</h1>
-        <div class="menu">
-            <ul>
-                <li><a href="res.html">HOME</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="admin.html">ADMINISTRATION</a></li>
-                <li><a href="contect.html">CONTACT US</a></li>
-            </ul> 
-        </div>
-    <table>
-        <tr>
-            <td><img src="chef1.jpg"> <P>CHEF:Saravanan<br>CEO of saravanabavan.pvt.limited</P>  </td>
-           <td><img src="chef2.jpg"> <p>CHEF:THAMU<br>most famose Indian celebrity chef</p> </td>
-            <td><img src="chef3.jpg">  <p>CHEF:vankat bhat<br>most famose Indian celebrity chef</p>   </td>
-        
-        </tr>
-        <tr>
-            <td><img src="chef4.jpg">  <p>CHEF:kunnal kapuur<br>chif cook in taj hotels.pvt.limited</p>   </td>
-            <td><img src="CHEF5.jpg"> <p>CHEF:Dalmia<br> first indian woman who won master chef tittle</p>    </td>
-            <td><img src="chef6.jpg">  <P>CHEF:Garmaiya <br>very popular youtube channek chef</P> </td>
-        </tr>
-       
-    </table>
-    </center>
-</body> 
-<footer>
-    <hr style="color: rgb(91, 38, 38);"> 
- </footer
-
-
-</html>
-
-asmin.css
-
-header{
-    ;
-}
-.name{
-    margin-top: 13px;
-    margin-left: 45%;
-}
-h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 39px;
-    color: rgba(215, 49, 7, 0.803);
-    
-}
-.name2{
-    font-family: cursive;
-    font-size: 37px;
-    color: rgba(222, 215, 13, 0.97);
-    font-weight: bold;
-    
-}
-li{
-    float: left;
-    list-style: none;
-}
-
-ul li a{
-display: flex;
-padding-left: 50px;
-padding-right: 50px;
-color: aquamarine;
-}
-ul li a:hover{
-    color: aliceblue;
-    cursor: pointer;
-    transform: scale(1.3);
-}
-body{
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-blend-mode: color-burn;
-}
-.menu{
-    margin-top: 40px;
-    margin-left: 80px;
-    border-width: 30px;
-    border-color: aquamarine;
-    background-color: rgb(84, 92, 92);
-    display: inline-flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: rgb(176, 129, 100);
-    border-radius:  25px;
-}
-.food{
-    margin-top: 90px;
-    padding: 14px;
-}
-td{
-padding: 20px;
-background-color:rgba(15, 1, 1, 0.636);
-border-width: px;
-border-radius: 18px;
-white-space: 5px;
-color: azure;
-}
-tr{
-    padding: 5px;
-}
-p{
-    font-weight: bolder;
-    align-items: center;
-}
-img{
-    align-items: center;
-}  
-
-footer .author{
-    color: rgb(245, 126, 7);
-    
-}
-footer .name{
-    font-weight: bold;
-    font-family: cursive;
-    margin-left: 50px;
-    font-size: larger;
-    color: rgb(220, 22, 68);
-}
-table tr td img{
-    border-radius: 50%;
-}
-table{
-    margin-top: 80px;
-}
-
-contect.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin page</title>
-    <link rel="stylesheet" href="contect.css">
-</head>
-<body>
-    <center>
-        <h1>CONTECT US</h1>
-        <div class="menu">
-            <ul>
-                <li><a href="res.html">HOME</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="admin.html">ADMINISTRATION</a></li>
-                <li><a href="contect.html">CONTACT US</a></li>
-            </ul> 
-        </div>
-        </center>
-        <div class="form">
-           <center> 
-            <h1>contect us</h1>
-            <input type="name" name="name" placeholder="Enter your name here">
-            <input type="name" placeholder="Enter your number">
-            <input type="number" name="" placeholder="Enter age here">
-            <button class="btrn"><a href="#">send massage</a></button>
-            <h1>our contect No:98765432</h1>
-        </center>
-       </div>
-        </body>
-        </html>
-
-contect.css
-
-header{
-    ;
-}
-.name{
-    margin-top: 13px;
-    margin-left: 45%;
-}
-h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 39px;
-    color: rgba(215, 49, 7, 0.803);
-    
-}
-.name2{
-    font-family: cursive;
-    font-size: 37px;
-    color: rgba(222, 215, 13, 0.97);
-    font-weight: bold;
-    
-}
-li{
-    float: left;
-    list-style: none;
-}
-
-ul li a{
-display: flex;
-padding-left: 50px;
-padding-right: 50px;
-color: aquamarine;
-}
-ul li a:hover{
-    color: aliceblue;
-    cursor: pointer;
-    transform: scale(1.3);
-}
-body{
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-blend-mode: color-burn;
-}
-.menu{
-    margin-top: 40px;
-    margin-left: 80px;
-    border-width: 30px;
-    border-color: aquamarine;
-    background-color: rgb(84, 92, 92);
-    display: inline-flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: rgb(176, 129, 100);
-    border-radius:  25px;
-}
-.form{
-    width: 320px;
-    height: 350px;
-    background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: 250px;
-    left: 600px;
-    border: 3px;
-    border-style: groove;                
-    align-items: center;
-}
-.form h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    color: #de1212;
-    width: 220px;
-    font-size: 22px;
-    background-color: aliceblue;
-    border-radius: 30px;
-    margin: 2px;
-    padding: 8px;
-
-}
-
-.form input{
-    background: transparent;
-    width: 240px;
-    height: 28px;
-     border-bottom: 1px solid  #de1212;
-     border-top: none;
-     border-left: none;
-     border-right: none;
-     color: aliceblue;
-     font-size: 10px;
-     letter-spacing: 1px;
-     margin-top: 25px;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.form input :focus{
-    outline: none;
-}
-
-::placeholder{
-    color: aliceblue;
-    font-family: arial;
-
-}
-
-.btrn{
-    width: 240px;
-    height: 40px;
-    background: #de1212;
-    margin-top: 26px;
-    font-size: 16px;
-    border-radius:10px;
-    cursor: pointer;
-    color: rgb(235, 239, 242);
-    transition: 0.4s ea;
-}
-
-.btrn :hover{
-    background: #f3f6f7;
-    color: #de1271;
-    width: 240px;
-    height: 40px;
-}
-.btrn a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-.form .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font size: 17px;
-    text align:center;
-    padding-top:20px
-
-}
-.form .link a{
-    text-decoration:none;
-    color: #de1212;
-}
-.liw{padding-bottom: 10px;
-    text-align: center;
-    padding-top: 14px;
-    
-
-}
-.icons a{
-    color: aliceblue;
-    text-decoration: none;
-}
-.icons ion-icon{
-    color: aliceblue;
-    font-size: 30px;
-    padding-left: 14px;
-    padding-top: 5px;
-}
-
-~~~
+```
 # OUTPUT:
-![Screenshot 2024-12-23 105023](https://github.com/user-attachments/assets/2d8efd87-79a5-4182-846e-76858f7d6c7b)
 
 
-menu's
-
-![Screenshot 2024-12-23 105137](https://github.com/user-attachments/assets/48315e2b-6429-4f3b-b62f-4045e57dbd4d)
-
-contact us
-
-![Screenshot 2024-12-24 110358](https://github.com/user-attachments/assets/b6bc2016-84fb-40a7-a2e9-8edd155f6697)
+![1 main](https://github.com/user-attachments/assets/1f01ed93-3fa4-418d-8e4e-2331775e77be)
 
 
-admin
-
-![Screenshot 2024-12-24 111111](https://github.com/user-attachments/assets/19ebe54f-da34-44f3-8d64-f593c4f398bc)
+![1 final (2)](https://github.com/user-attachments/assets/773852fa-0cde-460a-a680-969485a1be90)
 
 
+![2 finalized](https://github.com/user-attachments/assets/f00fd770-7bda-4fe8-b557-c40cd3121671)
 
 
+![3 finalized](https://github.com/user-attachments/assets/1f4d504d-0cd7-41ea-99e7-779944844aa9)
 
 
-
-
-
-
-
-
+![4 finalized](https://github.com/user-attachments/assets/5ecabd93-507e-4cce-91b0-05a32ebd6ec2)
 
 
 # RESULT:
